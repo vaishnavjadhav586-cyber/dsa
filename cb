@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdint.h>
+
+uint8_t handler(uint8_t a, uint16_t b)
+{
+    uint8_t c = a + b;
+    return c;
+}
+
+void display(uint8_t a, uint16_t b,
+             uint8_t (*ptr)(uint8_t, uint16_t))
+{
+  unit8_t result =   ptr(a, b);     
+printf("the result is : %i" , result)             // CHANGE: pass a and b to the function
+}
+
+int main(void)
+{
+    uint8_t a = 12;
+    uint16_t b = 26;
+
+    uint8_t (*ptr)(uint8_t, uint16_t) = handler;
+
+    display(a, b, ptr);
+
+    return 0;
+} is now correct

@@ -1,0 +1,7 @@
+# Ignore compiled C++ executable binaries
+*.exe
+*.out
+*.o
+
+# VS Code local workspace settings
+.vscode/
